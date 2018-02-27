@@ -3,6 +3,7 @@ SOURCES = pi.cpp calc.cpp
 OUTPUT_OPTIONS = \
 	-s WASM=1 \
 	-s EXPORTED_FUNCTIONS="['_get_pi']" \
+	-s EXTRA_EXPORTED_RUNTIME_METHODS="['getMemory']" \
 	--shell-file pi.html.template \
 	--source-map-base $(MAP_BASE) \
 	-g4
